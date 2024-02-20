@@ -28,4 +28,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
+-- Neotree recommended keymaps
+vim.keymap.set('n', '<leader>nt', '<cmd>Neotree toggle current reveal_force_cwd<cr>', { desc = 'Neotree toggle expanded' })
+vim.keymap.set('n', '<leader>nr', '<cmd>Neotree reveal<CR>', { desc = 'Neotree reveal' })
+vim.keymap.set('n', '<leader>b', '<cmd>Neotree toggle show buffers right<CR>', { desc = 'Neotree show buffers' })
+vim.keymap.set('n', '<leader>ng', '<cmd>Neotree float git_status<CR>', { desc = 'Neotree git status' })
+
 -- vim: ts=2 sts=2 sw=2 et

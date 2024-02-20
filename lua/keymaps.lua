@@ -1,5 +1,8 @@
 -- [[ Basic Keymaps ]]
 
+-- Press jj fast to escape
+vim.keymap.set({ 'i' }, 'jj', '<ESC>', { silent = true })
+
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })

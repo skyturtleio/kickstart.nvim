@@ -3,7 +3,7 @@
 -- NOTE: You can change these options as you wish!
 
 -- Set highlight on search
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 
 -- Make line numbers default
 vim.wo.number = true
@@ -38,5 +38,8 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+-- Set relative line numbers
+vim.o.relativenumber = true
 
 -- vim: ts=2 sts=2 sw=2 et

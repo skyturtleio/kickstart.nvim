@@ -14,7 +14,7 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+vim.keymap.set('n', '<leader>de', vim.diagnostic.open_float, { desc = '[D]ocument [E]rrors in floating window' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- [[ Highlight on yank ]]
@@ -31,7 +31,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Neotree recommended keymaps
 vim.keymap.set('n', '<leader>nt', '<cmd>Neotree toggle current reveal_force_cwd<cr>', { desc = 'Neotree toggle expanded' })
 vim.keymap.set('n', '<leader>nr', '<cmd>Neotree reveal<CR>', { desc = 'Neotree reveal' })
-vim.keymap.set('n', '<leader>b', '<cmd>Neotree toggle show buffers right<CR>', { desc = 'Neotree show buffers' })
+vim.keymap.set('n', '<leader>b', '<cmd>Neotree toggle focus buffers right<CR>', { desc = 'Neotree show buffers' })
 vim.keymap.set('n', '<leader>ng', '<cmd>Neotree float git_status<CR>', { desc = 'Neotree git status' })
 
 -- vim: ts=2 sts=2 sw=2 et

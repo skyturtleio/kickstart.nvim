@@ -84,7 +84,14 @@ local servers = {
   -- rust_analyzer = {},
   tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
-  elixirls = {},
+  elixirls = {
+    settings = {
+      elixirLS = {
+        autoInsertRequiredAlias = false,
+        fetchDeps = false,
+      },
+    },
+  },
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },

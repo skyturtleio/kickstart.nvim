@@ -9,6 +9,11 @@ https://github.com/kdheepak/kickstart.nvim/assets/1813121/f3ff9a2b-c31f-44df-a4f
 - [ ] typing `<%= %>` in HEEx templates
 - [ ] not having HTML tag pairing completion in HEEx templates
 
+### Conveniences
+
+- [ ] automatically `zt` so the symbol (or whatever I searched for) is at the top of the screen when you do a Document Symbol search wit Telescope
+- [ ] see document symbols with Neotree
+
 ### Introduction
 
 *This is a fork of [nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) that moves from a single file to a multi file configuration.*

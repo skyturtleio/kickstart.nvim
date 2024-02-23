@@ -56,6 +56,9 @@ require('lazy').setup({
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
 
+      -- Adds source for buffer words
+      'hrsh7th/cmp-buffer',
+
       -- Adds a number of user-friendly snippets
       'rafamadriz/friendly-snippets',
     },

@@ -86,7 +86,7 @@ local servers = {
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
   elixirls = {
     settings = {
-      elixirLS = {
+      elixirls = {
         autoInsertRequiredAlias = false,
         fetchDeps = false,
       },

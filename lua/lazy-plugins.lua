@@ -171,7 +171,9 @@ require('lazy').setup({
         section_separators = '',
       },
       sections = {
-        lualine_y = { 'ex.lsp.single' },
+        lualine_y = {
+          { 'ex.lsp.single', icons_enabled = true },
+        },
       },
       -- tabline = {
       --   lualine_a = { 'buffers' },

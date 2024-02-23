@@ -34,4 +34,22 @@ vim.keymap.set('n', '<leader>x', '<cmd>Neotree toggle focus filesystem<CR>', { d
 vim.keymap.set('n', '<leader>b', '<cmd>Neotree toggle focus buffers right<CR>', { desc = 'Neotree show buffers' })
 vim.keymap.set('n', '<leader>gn', '<cmd>Neotree float git_status<CR>', { desc = '[G]it [N]eotreej' })
 
+-- Move lines up and down in Visual mode (ThePrimeagen video)
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move line up in Visual mode' })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move line down in Visual mode' })
+
+-- Keep cursor in place when paging up and down
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Keep cursor in place when paging up and down' })
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Keep cursor in place when paging up and down' })
+
+-- "Yank" to system clipboard
+vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = '[Y]ank to system clipboard' })
+vim.keymap.set('n', '<leader>Y', [["+Y]], { desc = '[Y]ank to system clipboard' })
+
+-- Stay out of ex mode, don't press `Q`
+vim.keymap.set('n', 'Q', '<nop>', { desc = 'Stay out of ex mode' })
+
+-- Replace word you're on
+vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = '[S]ubstite word' })
+
 -- vim: ts=2 sts=2 sw=2 et

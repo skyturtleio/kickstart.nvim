@@ -8,6 +8,7 @@ https://github.com/kdheepak/kickstart.nvim/assets/1813121/f3ff9a2b-c31f-44df-a4f
 - [ ] autocomplete words that are in the current buffer
 - [ ] typing `<%= %>` in HEEx templates
 - [ ] not having HTML tag pairing completion in HEEx templates
+- [ ] reload Neovim without having to quit and open it back up
 
 ### Conveniences
 

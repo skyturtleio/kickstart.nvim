@@ -38,6 +38,8 @@ vim.keymap.set('n', '<leader>gn', '<cmd>Neotree float git_status<CR>', { desc = 
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move line up in Visual mode' })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move line down in Visual mode' })
 
+vim.keymap.set('n', '<leader>df', '[mzt', { desc = '[D]ocument move current [F]uncion to top of screen' })
+
 -- Keep cursor in place when paging up and down
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Keep cursor in place when paging up and down' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Keep cursor in place when paging up and down' })
@@ -50,6 +52,6 @@ vim.keymap.set('n', '<leader>Y', [["+Y]], { desc = '[Y]ank to system clipboard' 
 vim.keymap.set('n', 'Q', '<nop>', { desc = 'Stay out of ex mode' })
 
 -- Replace word you're on
-vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = '[S]ubstite word' })
+vim.keymap.set('n', '<leader>sw', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = '[S]ubstite [W]ord' })
 
 -- vim: ts=2 sts=2 sw=2 et

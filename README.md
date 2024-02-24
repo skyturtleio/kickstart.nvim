@@ -4,16 +4,16 @@ https://github.com/kdheepak/kickstart.nvim/assets/1813121/f3ff9a2b-c31f-44df-a4f
 
 ### Pain Points
 
-- [ ] autopairing for `""` or brackets like `%{}`
-- [ ] autocomplete words that are in the current buffer
 - [ ] typing `<%= %>` in HEEx templates
 - [ ] not having HTML tag pairing completion in HEEx templates
 - [ ] reload Neovim without having to quit and open it back up
+- [x] autocomplete words that are in the current buffer -> installed `cmp-buffer`
 
 ### Conveniences
 
 - [ ] automatically `zt` so the symbol (or whatever I searched for) is at the top of the screen when you do a Document Symbol search wit Telescope
 - [ ] see document symbols with Neotree
+- [ ] autopairing for `""` or brackets like `%{}`
 
 ### Introduction
 

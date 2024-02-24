@@ -29,9 +29,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Neotree recommended keymaps
-vim.keymap.set('n', '<leader>nt', '<cmd>Neotree toggle current reveal_force_cwd<cr>', { desc = 'Neotree toggle expanded' })
-vim.keymap.set('n', '<leader>x', '<cmd>Neotree toggle focus filesystem<CR>', { desc = 'Neotree E[X]plore files' })
-vim.keymap.set('n', '<leader>b', '<cmd>Neotree toggle focus buffers right<CR>', { desc = 'Neotree show buffers' })
+vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle current reveal_force_cwd<cr>', { desc = '[E]xpanded explore files in Neotree' })
+vim.keymap.set('n', '<leader>x', '<cmd>Neotree toggle focus filesystem<CR>', { desc = 'E[X]plore files in Neotree' })
+vim.keymap.set('n', '<leader>b', '<cmd>Neotree toggle focus buffers right<CR>', { desc = 'Neotree show [B]uffers' })
 vim.keymap.set('n', '<leader>gn', '<cmd>Neotree float git_status<CR>', { desc = '[G]it [N]eotreej' })
 
 -- Move lines up and down in Visual mode (ThePrimeagen video)

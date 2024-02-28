@@ -37,10 +37,6 @@ require 'lazy-bootstrap'
 -- [[ Configure plugins ]]
 require 'lazy-plugins'
 
--- [[ Configure Telescope ]]
--- (fuzzy finder)
-require 'telescope-setup'
-
 -- [[ Configure Treesitter ]]
 -- (syntax parser for highlighting)
 require 'treesitter-setup'

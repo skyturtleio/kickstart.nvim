@@ -1,19 +1,6 @@
-# kickstart-modular.nvim
+# Modular kickstart.nvim
 
-### Pain Points
-
-- [ ] typing `<%= %>` in HEEx templates
-- [ ] not having HTML tag pairing completion in HEEx templates
-- [ ] reload Neovim without having to quit and open it back up
-- [x] autocomplete words that are in the current buffer -> installed `cmp-buffer`
-
-### Conveniences
-
-- [ ] automatically `zt` so the symbol (or whatever I searched for) is at the top of the screen when you do a Document Symbol search wit Telescope
-- [ ] see document symbols with Neotree
-- [ ] autopairing for `""` or brackets like `%{}`
-
-### Introduction
+## Introduction
 
 *This is a fork of [nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) that moves from a single file to a multi file configuration.*
 
@@ -23,14 +10,37 @@ A starting point for Neovim that is:
 * Documented
 * Modular
 
-This repo is geared towards setups on macOS
+This repo is geared towards setups on macOS.
+
+## Installation
+
+### Install Neovim
 
 Kickstart.nvim targets *only* the latest ['stable'](https://github.com/neovim/neovim/releases/tag/stable) and latest ['nightly'](https://github.com/neovim/neovim/releases/tag/nightly) of Neovim. If you are experiencing issues, please make sure you have the latest versions.
 
-### Installation
+> **NOTE** 
+> [Backup](#FAQ) your previous configuration (if any exists)
+
+If you want to keep your other configuration around, you can use an `alias` so you can easily switch between your new and old configuration. See FAQ.
+
+After backing up your previous configuration, remove the following files and directories:
+
+- **data**: `~/.local/share/nvim/lazy`
+- **state**: `~/.local/state/nvim/lazy`
+- **lockfile**: `~/.config/nvim/lazy-lock.json`
+
+### Install External Dependencies
 
 > **NOTE** 
 > [Backup](#FAQ) your previous configuration (if any exists)
+
+External Requirements:
+- Basic utils: `git`, `make`, `unzip`, C Compiler (`gcc`)
+- [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+- Language Setup:
+  - If want to write Typescript, you need `npm`
+  - If want to write Golang, you will need `go`
+  - etc.
 
 Requirements:
 * Make sure to review the readmes of the plugins if you are experiencing errors. In particular:
@@ -46,20 +56,15 @@ Neovim's configurations are located under the following paths, depending on your
 Clone kickstart.nvim:
 
 - on Linux and Mac
+
 ```sh
-git clone https://github.com/dam9000/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+git clone  https://github.com/skyturtleio/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
+or if you would like to use SSH
 
-- on Windows (cmd)
+```sh
+git clone git@github.com:skyturtleio/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
-git clone https://github.com/dam9000/kickstart-modular.nvim.git %userprofile%\AppData\Local\nvim\
-```
-
-- on Windows (powershell)
-```
-git clone https://github.com/dam9000/kickstart-modular.nvim.git $env:USERPROFILE\AppData\Local\nvim\
-```
-
 
 ### Post Installation
 
@@ -76,6 +81,8 @@ If you would prefer to hide this step and run the plugin sync from the command l
 ```sh
 nvim --headless "+Lazy! sync" +qa
 ```
+
+
 
 ### Getting Started
 
@@ -169,55 +176,15 @@ This will install the tree plugin and add the command `:Neotree` for you. You ca
     * [Restructure the configuration](https://github.com/nvim-lua/kickstart.nvim/issues/218)
     * [Reorganize init.lua into a multi-file setup](https://github.com/nvim-lua/kickstart.nvim/pull/473)
 
-### Hints And Tips For New Neovimmers
+### Pain Points
 
-Neovim is a very rich and powerful environment, but it can also feel a bit
-intimidating for new users trying to find their way around, especially if
-they're coming from other environments like Visual Studio Code or a traditional
-IDE.
+- [ ] typing `<%= %>` in HEEx templates
+- [ ] not having HTML tag pairing completion in HEEx templates
+- [ ] reload Neovim without having to quit and open it back up
+- [x] autocomplete words that are in the current buffer -> installed `cmp-buffer`
 
-There's no way this README can provide you with everything you need to know, but
-here are a few tips so you can learn how to learn.
+### Conveniences
 
-### Use The Help, Luke!
-
-Neovim's help system is incredibly thorough and extensive. You should really
-take a moment to get comfortable navigating through help topics, going back and
-forth, navigating the menus, etc. This won't just help you read the help, it
-will empower you in the rest of your Neovim journey.
-
-You can double click on a topic to drill down, and hit Ctrl-o (Hold down the
-Control key and the 'o' key) to go back.
-
-Read the first page you get when you run :help carefully. it will serve you
-well.
-
-You can also get help on a particular thing by typing ":help <topic>".
-
-Like, let's say we want to learn more about folding, just type ":help folding".
-
-### To The Telescope!
-
-One of the more powerful features you get by installing this project is the
-brilliant Telescope plugin co-written by @tjdevries.
-
-Take a minute to browse through ":help telescope" and get a sense for all the
-amazing superpowers you've gained.
-
-In particular, there are two Telescope features that are incredible for helping
-you understand how to do a particular thing or how to configure a particular
-feature.
-
-If you're not sure what to look for, try ":Telescope help_tags". Let's say we
-want to configure Neovim to automatically word wrap. We might type ":Telescope
-help_tags" and then type w, r, a, p. Notice how the list of results changes with
-each new letter you type? When you're done you've got a screen full of topics
-involving word wrap.
-
-Another common question is "What keys do I hit to make a thing happen?". To get
-an answer, one way is to use ":Telescope keymaps". You'll get the same list of
-results that changes to adapt with each new key you press.
-
-With these hints in mind you should be in good shape to get learning. Remember,
-you are on a journey of discovery here, adapting your programming environment to
-your needs. It will take effort, but the rewards are worth it! :)
+- [ ] automatically `zt` so the symbol (or whatever I searched for) is at the top of the screen when you do a Document Symbol search wit Telescope
+- [ ] see document symbols with Neotree
+- [ ] autopairing for `""` or brackets like `%{}`

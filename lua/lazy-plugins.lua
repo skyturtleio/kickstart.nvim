@@ -10,8 +10,9 @@
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  -- NOTE: First, some plugins that don't require any configuration
+  -- [[ Plugin Specs list ]]
 
+  -- NOTE: First, some plugins that don't require any configuration
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
@@ -31,23 +32,10 @@ require('lazy').setup({
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
-  -- Here is a more advanced example where we pass configuration
-  -- options to `gitsigns.nvim`. This is equivalent to the following lua:
-  --    require('gitsigns').setup({ ... })
-  --
-  -- See `:help gitsigns` to understand what the configuration keys do
-  { -- Adds git related signs to the gutter, as well as utilities for managing changes
-    'lewis6991/gitsigns.nvim',
-    opts = {
-      signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
-        topdelete = { text = '‾' },
-        changedelete = { text = '~' },
-      },
-    },
-  },
+  -- modular approach: using `require 'path/name'` will
+  -- include a plugin definition from file lua/path/name.lua
+
+  require 'kickstart/plugins/gitsigns',
 
   -- NOTE: Plugins can specify dependencies.
   --
@@ -82,24 +70,8 @@ require('lazy').setup({
       { 'nvim-tree/nvim-web-devicons' },
     },
   },
-  -- NOTE: This is where your plugins related to LSP can be installed.
-  --  The configuration is done below. Search for lspconfig to find it below.
-  {
-    -- LSP Configuration & Plugins
-    'neovim/nvim-lspconfig',
-    dependencies = {
-      -- Automatically install LSPs to stdpath for neovim
-      { 'williamboman/mason.nvim', config = true },
-      'williamboman/mason-lspconfig.nvim',
 
-      -- Useful status updates for LSP
-      -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', opts = {} },
-
-      -- Additional lua configuration, makes nvim stuff amazing!
-      'folke/neodev.nvim',
-    },
-  },
+  require 'kickstart/plugins/lspconfig',
 
   {
     -- Autocompletion

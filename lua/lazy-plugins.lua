@@ -45,64 +45,15 @@ require('lazy').setup {
 
   require 'kickstart/plugins/cmp',
 
-  {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
-    lazy = false,
-    config = function()
-      require('onedark').setup {
-        -- Set a style preset. 'dark' is default.
-        style = 'deep', -- dark, darker, cool, deep, warm, warmer, light
-      }
-      require('onedark').load()
-    end,
-  },
+  require 'kickstart/plugins/onedark',
 
-  {
-    -- Set lualine as statusline
-    'nvim-lualine/lualine.nvim',
-    dependencies = {
-      'dokwork/lualine-ex',
-      'nvim-tree/nvim-web-devicons',
-    },
-    -- See `:help lualine.txt`
-    opts = {
-      options = {
-        icons_enabled = false,
-        theme = 'auto',
-        component_separators = '|',
-        section_separators = '',
-      },
-      sections = {
-        lualine_y = {
-          { 'ex.lsp.single', icons_enabled = true },
-        },
-      },
-      -- tabline = {
-      --   lualine_a = { 'buffers' },
-      --   lualine_z = { 'tabs'}
-      -- },
-    },
-  },
+  require 'kickstart/plugins/mini',
 
-  {
-    -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help ibl`
-    main = 'ibl',
-    opts = {},
-  },
+  require 'kickstart/plugins/lualine',
 
-  {
-    -- Highlight, edit, and navigate code
-    'nvim-treesitter/nvim-treesitter',
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter-textobjects',
-    },
-    build = ':TSUpdate',
-  },
+  require 'kickstart/plugins/indent-blankline',
+
+  require 'kickstart/plugins/treesitter',
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.

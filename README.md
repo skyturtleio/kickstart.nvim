@@ -185,6 +185,7 @@ This will install the tree plugin and add the command `:Neotree` for you. You ca
 
 ### Conveniences
 
+- [ ] go to the end of an Elixir block (maybe Treesitter textobject?)
 - [ ] automatically `zt` so the symbol (or whatever I searched for) is at the top of the screen when you do a Document Symbol search wit Telescope
 - [ ] see document symbols with Neotree
 - [ ] autopairing for `""` or brackets like `%{}`

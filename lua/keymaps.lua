@@ -37,12 +37,6 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
--- Neotree recommended keymaps
-vim.keymap.set('n', '<Leader>e', '<cmd>Neotree toggle current reveal_force_cwd<cr>', { desc = '[E]xpanded explore files in Neotree' })
-vim.keymap.set('n', '<Leader>x', '<cmd>Neotree toggle focus filesystem<CR>', { desc = 'E[X]plore files in Neotree' })
-vim.keymap.set('n', '<Leader>b', '<cmd>Neotree toggle focus buffers right<CR>', { desc = 'Neotree show [B]uffers' })
-vim.keymap.set('n', '<Leader>gn', '<cmd>Neotree float git_status<CR>', { desc = '[G]it [N]eotreej' })
-
 -- Move lines up and down in Visual mode (ThePrimeagen video)
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move line up in Visual mode' })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move line down in Visual mode' })

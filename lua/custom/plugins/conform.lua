@@ -7,6 +7,7 @@ return {
   --    require('conform').setup({})
   opts = {
     format_on_save = {
+      async = false,
       timeout_ms = 500,
       lsp_fallback = true,
     },
@@ -25,5 +26,13 @@ return {
       -- You can use a sub-list to tell conform to run *until* a formatter
       -- is found.
     },
+    vim.keymap.set({ 'n', 'v' }, '<leader>mp', function()
+      local conform = require 'conform'
+      conform.format {
+        lsp_fallback = true,
+        async = false,
+        timeout_ms = 500,
+      }
+    end, { desc = '[M]ake [P]retty - format file' }),
   },
 }

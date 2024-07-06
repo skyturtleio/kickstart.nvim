@@ -12,7 +12,11 @@ return {
     },
     -- Define your formatters
     formatters_by_ft = {
+      html = { 'prettier' },
+      css = { 'prettier' },
       javascript = { 'prettier' },
+      typescript = { 'prettier' },
+      svelte = { 'prettier' },
       json = { 'fixjson' },
       lua = { 'stylua' },
       -- Conform can also run multiple formatters sequentially

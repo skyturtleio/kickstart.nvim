@@ -1,7 +1,7 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 --  In general, I like to keep keymaps with the plugin they're related to, but there are execptions.
---  For example, Telescope keymaps are in `telescope-setup.lua`, but in this file, I have set upper
+--  For example, Telescope keymaps are in `telescope-setup.lua`, but in this file, I have set up
 --  some keymaps for Neotree.
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode

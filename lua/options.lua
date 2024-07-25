@@ -34,6 +34,9 @@ vim.wo.signcolumn = 'yes'
 
 -- Decrease update time
 vim.o.updatetime = 250
+
+-- Decrease mapped sequence wait time
+-- Displays which-key popup sooner
 vim.o.timeoutlen = 300
 
 -- Configure how new splits should be opened

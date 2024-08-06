@@ -150,7 +150,8 @@ return {
 
         elixirls = {
           settings = {
-            ['elixirls'] = {
+            -- ['elixirls'] = {
+            elixirLS = {
               autoInsertRequiredAlias = false,
               fetchDeps = false,
             },

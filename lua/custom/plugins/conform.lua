@@ -20,7 +20,7 @@ return {
       typescript = { 'prettier' },
       typescriptreact = { 'prettier' },
       svelte = { 'prettier' },
-      json = { 'fixjson' },
+      json = { 'fixjson', 'prettier' },
       jsonc = { 'fixjson' },
       lua = { 'stylua' },
       -- Conform can also run multiple formatters sequentially

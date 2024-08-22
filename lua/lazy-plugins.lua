@@ -46,13 +46,10 @@ require('lazy').setup {
   require 'kickstart/plugins/cmp',
 
   require 'kickstart/plugins/onedark',
-  -- require 'kickstart/plugins/everblush',
 
   require 'kickstart/plugins/mini',
 
   require 'kickstart/plugins/lualine',
-
-  -- require 'kickstart/plugins/indent-blankline',
 
   require 'kickstart/plugins/treesitter',
 

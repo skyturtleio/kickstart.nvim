@@ -20,8 +20,8 @@ return {
       typescript = { 'prettier' },
       typescriptreact = { 'prettier' },
       svelte = { 'prettier' },
-      json = { 'fixjson', 'prettier' },
-      jsonc = { 'fixjson' },
+      json = { 'prettier' },
+      jsonc = { 'prettier' },
       lua = { 'stylua' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },

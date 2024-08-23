@@ -60,6 +60,9 @@ vim.opt.scrolloff = 10
 
 -- END OF ORIGINAL KICKSTART.NVIM
 
+vim.opt.wrap = false
+vim.opt.sidescroll = 10
+
 -- Set completeopt to have a better completion experience
 -- From modular version
 -- vim.o.completeopt = 'menuone,noselect'

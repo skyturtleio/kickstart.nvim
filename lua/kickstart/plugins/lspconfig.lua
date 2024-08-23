@@ -164,9 +164,9 @@ return {
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
-        -- I've disabled `tsserver` to use `typescript-tools` plugin package instead
         --
 
+        tsserver = {},
         elixirls = {
           settings = {
             -- ['elixirls'] = {

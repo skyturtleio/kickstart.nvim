@@ -3,13 +3,6 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-  -- {
-  --   -- OneNord - Neovim theme compatible with Treesitter
-  --   'rmehri01/onenord.nvim',
-  --   config = function()
-  --     require('onenord').setup {}
-  --   end,
-  -- },
   'elixir-editors/vim-elixir',
 }
 

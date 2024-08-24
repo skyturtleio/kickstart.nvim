@@ -23,6 +23,7 @@ return {
           'lua',
           'markdown',
           'svelte',
+          'tsx',
           'typescript',
           'vim',
           'vimdoc',

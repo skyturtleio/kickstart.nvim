@@ -44,6 +44,15 @@ return {
 
       -- Create autocommand which carries out the actual linting
       -- on the specified events.
+      lint.linters.eslint_d = require('lint.util').wrap(lint.linters.eslint_d, function(diagnostic)
+        -- try to ignore "No ESLint configuration found" error
+        -- source: https://github.com/mfussenegger/nvim-lint/issues/462#issuecomment-2288048568
+        if diagnostic.message:find 'Error: Could not find config file' then
+          return nil
+        end
+        return diagnostic
+      end)
+
       local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })
       vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWritePost', 'InsertLeave' }, {
         group = lint_augroup,

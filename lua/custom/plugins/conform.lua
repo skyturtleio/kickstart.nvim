@@ -29,13 +29,13 @@ return {
       -- You can use a sub-list to tell conform to run *until* a formatter
       -- is found.
     },
-    vim.keymap.set({ 'n', 'v' }, '<leader>mp', function()
+    vim.keymap.set({ 'n', 'v' }, '<leader>ff', function()
       local conform = require 'conform'
       conform.format {
         lsp_fallback = true,
         async = false,
-        timeout_ms = 500,
+        timeout_ms = 1000,
       }
-    end, { desc = '[M]ake [P]retty - format file' }),
+    end, { desc = '[F]ormat [F]ile - format file' }),
   },
 }

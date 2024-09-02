@@ -20,6 +20,7 @@ return {
           'heex',
           'html',
           'javascript',
+          'jsx',
           'lua',
           'markdown',
           'svelte',

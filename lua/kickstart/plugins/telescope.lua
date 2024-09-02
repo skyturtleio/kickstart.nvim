@@ -41,6 +41,7 @@ return {
               ['<C-d>'] = false,
             },
           },
+          file_ignore_patterns = { '^assets/vendor/' }, -- ignores vendored Heroicons in Phoenix project
         },
         extensions = {
           ['ui-select'] = {

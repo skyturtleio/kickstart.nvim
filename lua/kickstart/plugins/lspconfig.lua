@@ -225,6 +225,15 @@ return {
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
+
+            -- Breaking change: `tsserver` was renamed to `ts_ls`
+            -- Occurred when I updated Lazy on 2024-09-05
+            -- Until Mason is updated for the LSP name, here is a temporary fix
+            -- source: https://github.com/neovim/nvim-lspconfig/pull/3232#issuecomment-2331025714
+            if server_name == 'tsserver' then
+              server_name = 'ts_ls'
+            end
+
             require('lspconfig')[server_name].setup {
               cmd = server.cmd,
               settings = server.settings,

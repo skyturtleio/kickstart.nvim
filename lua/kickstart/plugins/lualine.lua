@@ -66,9 +66,9 @@ return {
         section_separators = '',
       },
       sections = {
-        lualine_x = {
-          get_attached_clients,
-        },
+        -- lualine_x = {
+        --   get_attached_clients,
+        -- },
         lualine_y = {
           { 'ex.lsp.single', icons_enabled = true },
         },

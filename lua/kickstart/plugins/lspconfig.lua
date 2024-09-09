@@ -156,7 +156,6 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        -- clangd = {},
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -165,11 +164,11 @@ return {
         -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
         --
-        -- But for many setups, the LSP (`tsserver`) will work just fine
-        -- tsserver = {},
-        --
+        -- But for many setups, the LSP (`ts_ls`) will work just fine
+        -- NOTE: `tsserver` was renamed to `ts_ls` on 2024-09-05
+        -- ts_ls = {},
 
-        tsserver = {},
+        ts_ls = {},
         elixirls = {
           settings = {
             -- ['elixirls'] = {
@@ -225,14 +224,6 @@ return {
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
-
-            -- Breaking change: `tsserver` was renamed to `ts_ls`
-            -- Occurred when I updated Lazy on 2024-09-05
-            -- Until Mason is updated for the LSP name, here is a temporary fix
-            -- source: https://github.com/neovim/nvim-lspconfig/pull/3232#issuecomment-2331025714
-            if server_name == 'tsserver' then
-              server_name = 'ts_ls'
-            end
 
             require('lspconfig')[server_name].setup {
               cmd = server.cmd,

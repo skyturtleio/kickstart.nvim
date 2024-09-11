@@ -71,4 +71,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Toggle diagnostics e.g. the virtual text that can get annoying on/off
+vim.keymap.set('n', '<leader>td', function()
+  vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+end, { silent = true, noremap = true })
+
 -- vim: ts=2 sts=2 sw=2 et

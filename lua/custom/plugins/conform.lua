@@ -23,6 +23,7 @@ return {
       json = { 'prettier' },
       jsonc = { 'prettier' },
       lua = { 'stylua' },
+      ocaml = { 'ocamlformat' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --

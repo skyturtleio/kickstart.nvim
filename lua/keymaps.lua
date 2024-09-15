@@ -11,8 +11,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<Leader>de', vim.diagnostic.open_float, { desc = '[D]ocument [E]rrors in floating window' })
-vim.keymap.set('n', '<Leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+vim.keymap.set('n', '<Leader>x', vim.diagnostic.open_float, { desc = 'Document Errors in floating window' })
+vim.keymap.set('n', '<Leader>dl', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows

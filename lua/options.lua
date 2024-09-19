@@ -63,6 +63,11 @@ vim.opt.scrolloff = 10
 vim.opt.wrap = false
 vim.opt.sidescroll = 10
 
+-- I was having an issue with Bun.sh --watch mode failing
+-- I don't know why this works. The GitHub issue where I found this is:
+-- https://github.com/oven-sh/bun/issues/8520
+vim.opt.backupcopy = 'yes'
+
 -- Set completeopt to have a better completion experience
 -- From modular version
 -- vim.o.completeopt = 'menuone,noselect'

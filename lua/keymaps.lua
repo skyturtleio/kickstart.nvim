@@ -76,4 +76,7 @@ vim.keymap.set('n', '<leader>td', function()
   vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end, { silent = true, noremap = true })
 
+-- Disable macro recording when pressing `q`
+vim.keymap.set('n', 'q', '<Nop>', { desc = 'Disable macro recording' })
+
 -- vim: ts=2 sts=2 sw=2 et

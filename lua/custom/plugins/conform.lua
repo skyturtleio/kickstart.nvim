@@ -13,6 +13,7 @@ return {
     },
     -- Define your formatters
     formatters_by_ft = {
+      elixir = { 'mix' },
       html = { 'prettier' },
       css = { 'prettier' },
       javascript = { 'prettier' },

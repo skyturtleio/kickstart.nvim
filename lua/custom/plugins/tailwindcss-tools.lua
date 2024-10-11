@@ -8,4 +8,9 @@ return {
     'neovim/nvim-lspconfig', -- optional
   },
   opts = {}, -- your configuration
+  config = function()
+    require('tailwind-tools').setup {
+      -- your configuration
+    }
+  end,
 }

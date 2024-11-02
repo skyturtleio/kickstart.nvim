@@ -1,23 +1,23 @@
 {
-    "name": "my-snippets",
-    "engines": {
-        "vscode": "^1.11.0"
-    },
-    "contributes": {
-        "snippets": [
-            {
-                "language": "elixir",
-                "path": "./snippets/elixir.json"
-            },
-            {
-                "language": ["eelixir", "heex"],
-                "path": "./snippets/heex.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/html.json"
-            }
-        ]
-    }
+  "name": "my-snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "elixir",
+          "eelixir",
+          "heex",
+          "surface"
+        ],
+        "path": "./snippets/elixir.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/html.json"
+      }
+    ]
+  }
 }
-

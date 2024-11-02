@@ -1,1 +1,15 @@
-{}
+{
+  "%": {
+    "prefix": "ee",
+    "body": "<% $0 %>"
+  },
+  "=": {
+    "prefix": "ei",
+    "body": "<%= $0 %>"
+  },
+  "lv_heex": {
+    "prefix": "h",
+    "body": ["~H\"\"\"", "${0}", "\"\"\""],
+    "description": "LiveView HEEx template"
+  }
+}
